@@ -1,0 +1,93 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun, child-friendly font */
+    background-color: #f0f8ff; /* Light background */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff69b4; /* Bright header color */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 5px solid #ffa07a; /* Contrasting border color */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #ff4500; /* Bright heading color */
+}
+
+.fabric-btn {
+    background-color: #add8e6; /* Light button color */
+    border: none;
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fabric-btn:hover {
+    background-color: #87cefa; /* Button hover effect */
+}
+
+.clothing-btn {
+    background-color: #add8e6; /* Light button color */
+    border: none;
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clothing-btn:hover {
+    background-color: #87cefa; /* Button hover effect */
+}
+
+.model-options {
+    display: flex;
+    justify-content: center; /* Align images in a line */
+    gap: 10px; /* Spacing between images */
+}
+
+.model-img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Optional: Rounded corners for images */
+}
+
+.model-img:hover {
+    transform: scale(1.1);
+}
+
+.model-img.selected {
+    border: 2px solid blue;
+}
+
+#display-area {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fffafa; /* Soft white area for display */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+footer {
+    background-color: #ff69b4;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

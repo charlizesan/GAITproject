@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Design App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Fashion Design App</h1>
+    </header>
+    <main>
+        <section id="model-selection">
+            <h2>Select a Model</h2>
+            <div class="model-options">
+                <img src="{{ url_for('static', filename='model1.png') }}" alt="Model 1" class="model-img" data-model="model1">
+                <img src="{{ url_for('static', filename='model2.png') }}" alt="Model 2" class="model-img" data-model="model2">
+                <img src="{{ url_for('static', filename='model3.png') }}" alt="Model 3" class="model-img" data-model="model3">
+            </div>
+        </section>
+
+        <section id="fabric-selection">
+            <h2>Select Fabric</h2>
+            <button type="button" class="fabric-btn" data-fabric="fabric1">Fabric 1</button>
+            <button type="button" class="fabric-btn" data-fabric="fabric2">Fabric 2</button>
+            <button type="button" class="fabric-btn" data-fabric="fabric3">Fabric 3</button>
+        </section>
+
+        <section id="clothing-selection">
+            <h2>Select Dress</h2>
+            <button type="button" class="clothing-btn" data-fabric="clothing1">Fabric 1</button>
+            <button type="button" class="clothing-btn" data-fabric="clothing2">Fabric 1</button>
+            <button type="button" class="clothing-btn" data-fabric="clothing3">Fabric 1</button>
+        </section>
+
+        <section id="display-area">
+            <h2>Design Preview</h2>
+            <!-- Area to display the selected model with chosen fabric -->
+            <!-- This will likely require JavaScript and CSS for dynamic updates -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Fashion Design App</p>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
