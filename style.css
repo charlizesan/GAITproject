@@ -1,0 +1,158 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun, child-friendly font */
+    background-color: #f0f8ff; /* Light background */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff69b4; /* Bright header color */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 5px solid #ffa07a; /* Contrasting border color */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+h2 {
+    color: #ff4500; /* Bright heading color */
+}
+.fabric-options {
+    display: flex;
+    justify-content: center; /* Align images in a line */
+    gap: 10px; /* Spacing between images */
+}
+
+.fabric-img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Optional: Rounded corners for images */
+}
+
+.fabric-img:hover {
+    transform: scale(1.1);
+}
+
+.fabric-img.selected {
+    border: 10px solid blue;
+}
+
+.dress-options {
+    display: flex;
+    justify-content: center; /* Align images in a line */
+    gap: 10px; /* Spacing between images */
+}
+
+.dress-img {
+    width: auto;
+    height: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Optional: Rounded corners for images */
+}
+
+.dress-img:hover {
+    transform: scale(1.1);
+}
+
+.dress-img.selected {
+    border: 10px solid blue;
+}
+
+.model-options {
+    display: flex;
+    justify-content: center; /* Align images in a line */
+    gap: 10px; /* Spacing between images */
+}
+
+.model-img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px; /* Optional: Rounded corners for images */
+}
+
+.model-img:hover {
+    transform: scale(1.1);
+}
+
+.model-img.selected {
+    border: 10px solid blue;
+}
+
+.video-container {
+    width: 640px; /* Set your desired width */
+    height: 480px; /* Set your desired height */
+    margin: 0 auto; /* Center the video horizontally on the page */
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh; /* 100% of viewport height */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #b300a1; /* Button background color on hover */
+}
+.media-container {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: flex-start; /* Align items to the start */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line on smaller screens */
+}
+
+.audio-container {
+    flex: 0 0 300px; /* Fixed width for the audio player */
+    margin-right: 20px; /* Spacing between audio and video containers */
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+    .media-container {
+        flex-direction: column;
+    }
+
+    .audio-container {
+        flex: 0 0 auto; /* Reset flex-grow, flex-shrink, and flex-basis values */
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%; /* Full width on small screens */
+    }
+}
+
+
+generateButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+generateButton:hover {
+    background-color: #b300a1; /* Button background color on hover */
+}
+
+

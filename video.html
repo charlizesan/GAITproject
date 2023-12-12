@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChicCraft: Your Fashion Playground</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Your Personalized Fashion Show!</h1>
+    </header>
+        <div class="audio-container">
+            <h2>Play Me!</h2>
+            <audio controls>
+                <source src="{{ url_for('speech', filename='speech.mp3') }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="video-container">
+            <video width="100%" height="100%" controls>
+                <source src="{{ url_for('static', filename=video_filename) }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+</body>
+</html>
