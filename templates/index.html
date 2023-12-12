@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Design App</title>
+    <title>ChicCraft: Your Fashion Playground</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
-        <h1>Welcome to the Fashion Design App</h1>
+        <h1>ChicCraft: Your Fashion Playground</h1>
     </header>
     <main>
         <section id="model-selection">
@@ -21,28 +21,41 @@
         </section>
 
         <section id="fabric-selection">
-            <h2>Select Fabric</h2>
-            <button type="button" class="fabric-btn" data-fabric="fabric1">Fabric 1</button>
-            <button type="button" class="fabric-btn" data-fabric="fabric2">Fabric 2</button>
-            <button type="button" class="fabric-btn" data-fabric="fabric3">Fabric 3</button>
+            <h2>Select a Fabric</h2>
+            <div class="fabric-options">
+                <img src="{{ url_for('static', filename='fabric1.png') }}" alt="Fabric 1" class="fabric-img" data-model="fabric1">
+                <img src="{{ url_for('static', filename='fabric2.png') }}" alt="Fabric 2" class="fabric-img" data-model="fabric2">
+                <img src="{{ url_for('static', filename='fabric3.png') }}" alt="Fabric 3" class="fabric-img" data-model="fabric3">
+            </div>
         </section>
 
-        <section id="clothing-selection">
-            <h2>Select Dress</h2>
-            <button type="button" class="clothing-btn" data-fabric="clothing1">Fabric 1</button>
-            <button type="button" class="clothing-btn" data-fabric="clothing2">Fabric 1</button>
-            <button type="button" class="clothing-btn" data-fabric="clothing3">Fabric 1</button>
+        <section id="fabric-selection">
+            <h2>Select a dress</h2>
+            <div class="fabric-options">
+                <img src="{{ url_for('static', filename='dress1.png') }}" alt="Dress 1" class="dress-img" data-model="dress1">
+                <img src="{{ url_for('static', filename='dress2.png') }}" alt="Dress 2" class="dress-img" data-model="dress2">
+                <!-- <img src="{{ url_for('static', filename='dress3.png') }}" alt="Fabric 3" class="fabric-img" data-model="fabric3"> -->
+            </div>
         </section>
+        <section id="text-input">
+            <h2>Make her talk! (You can chose from an English, Spanish, or French)</h2>
+            <form action="/video" method="POST">
+                <textarea name="text" placeholder="Type Anything"></textarea>
+            
+                <!-- Language selection dropdown -->
+                <select name="language">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <!-- Add other languages as needed -->
+                </select>
+                <input type="hidden" name="selected_video" id="selectedVideo">
+                <generateButton id="generateButton" type="submit">See Her Come To Life!</generateButton>
+            </form>        
+        </section>
+        
 
-        <section id="display-area">
-            <h2>Design Preview</h2>
-            <!-- Area to display the selected model with chosen fabric -->
-            <!-- This will likely require JavaScript and CSS for dynamic updates -->
-        </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Fashion Design App</p>
-    </footer>
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
